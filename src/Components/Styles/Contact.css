@@ -1,0 +1,41 @@
+.contact{
+    padding: 8rem 3rem;
+}
+.c-text{
+    color: var(--primary-clr);
+    margin-bottom: .5rem;
+}
+.contact h2{
+    text-align: center;
+}
+.contact p{
+    text-align: center;
+    font-size: .8rem;
+    color: var(--tertiary-clr);
+}
+.contact form{
+    text-align: center;
+    margin: 1.5rem auto;
+    max-width: 55rem;
+}
+.contact form input,
+.contact form textarea{
+    display: grid;
+    width: 100%;
+    color: var(--text1-clr);
+    background-color: var(--light-p-clr);
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    padding: .7rem;
+ 
+}
+.contact form textarea{
+    resize: none;
+}
+@media (max-width:998px){
+    textarea{
+        height: 10rem;
+    }
+}

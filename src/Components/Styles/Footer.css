@@ -1,0 +1,21 @@
+
+.main-footer{
+ text-align: center;
+ padding-bottom: 0;
+ background-color: var(--footer-clr); 
+ margin-top: 15%;
+ padding: 1rem;
+} 
+.p-footer{
+    color: var(--text1-clr);
+    font-size: .9rem;
+}
+@media (max-width:998px){
+  .p-footer{
+  font-size: .6rem;
+ 
+  }
+  .main-footer{
+    padding: .9rem; 
+  }
+}

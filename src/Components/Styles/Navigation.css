@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
+.header {
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 8rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: var(--bg-clr);
+    filter: drop-shadow(.2rem .2rem .2rem var(--shadow-clr));
+}
+
+.logoText {
+    font-family: 'Lumanosimo', cursive;
+    color: var(--primary-clr);
+    font-size: 2.2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0rem .5rem;
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-size: .85rem;
+    padding: 0rem .5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    color: var(--text1-clr);
+}
+
+.navbar li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -.3rem;
+    height: .1rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-clr);
+    transform: scale(0);
+    visibility: hidden;
+    transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.navbar li a:hover::after {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.navbar li a.active {
+    color: var(--primary-clr);
+}
+
+.navbar li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -.3rem;
+    height: .1rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-clr);
+    visibility: visible;
+    transform: scale(1);
+}
+
+.navbar div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+.navbar div .btn {
+    height: 2.5rem;
+    width: 7rem;
+    background: none;
+    border: .1rem solid var(--primary-clr);
+    color: var(--primary-clr);
+    letter-spacing: .03rem;
+    transition: ease all 0.3s;
+}
+
+.navbar div .btn:hover {
+    letter-spacing: .12rem;
+}
+
+.ldMode {
+    color: var(--text1-clr);
+    font-size: 1.3rem;
+    margin-top: .25rem;
+}
+
+.ldMode:hover {
+    color: var(--primary-clr);
+    cursor: pointer;
+}
+
+#m-mode {
+    display: none;
+}
+
+.toggle {
+    display: none;
+}
+
+@media (max-width:1080px) {
+    .header {
+        height: 4rem;
+        padding: 0rem 6rem;
+    }
+}
+
+@media (max-width:998px) {
+    .header {
+        height: 3.5rem;
+        padding: 0rem 1rem;
+    }
+
+    .logo {
+        width: 5rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-top: 5rem;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        list-style: none;
+        width: 100%;
+        height: 110vh;
+        background-color: var(--text2-clr);
+    }
+
+    .mobile-menu li a {
+        font-size: 1rem;
+    }
+
+    .mobile-menu li a.active::after {
+        visibility: visible;
+        transform: scale(0);
+    }
+
+    .pc-mode {
+        display: none;
+    }
+
+    #m-mode {
+        display: block;
+    }
+
+    .mobile-mode {
+        display: block;
+        position: relative;
+        right: 1.2rem;
+        bottom: .42rem;
+    }
+
+    .toggle {
+        font-size: 1.65rem;
+        display: block;
+        position: relative;
+        top: .8rem;
+        z-index: 1;
+        cursor: pointer;
+        color: var(--primary-clr);
+    }
+
+    .toggle:hover {
+        color: var(--first-clr);
+    }
+
+    #cross {
+        font-size: 1rem;
+    }
+
+    .navbar div .btn {
+        width: 12rem;
+        margin-left: -.5rem;
+    }
+
+    .navbar div .btn:hover {
+        letter-spacing: .2rem;
+    }
+}
